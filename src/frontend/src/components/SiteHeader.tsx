@@ -4,10 +4,14 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import { useNavigate } from '@tanstack/react-router';
 import { SiYoutube } from 'react-icons/si';
+import { useGetWebsiteContent } from '../hooks/useWebsiteContent';
 
 export default function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const { data: content } = useGetWebsiteContent();
+
+  const youtubeLink = content?.introVideoLink || 'https://youtube.com/@englishdiscovery2.o?si=Dxh-_WZvGCHPj7hf';
 
   const scrollToSection = (sectionId: string) => {
     // Navigate to home first if not already there
@@ -70,7 +74,7 @@ export default function SiteHeader() {
             className="text-sm font-medium"
           >
             <a
-              href="https://youtube.com/@englishdiscovery2.o?si=Dxh-_WZvGCHPj7hf"
+              href={youtubeLink}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube Channel"
@@ -106,7 +110,7 @@ export default function SiteHeader() {
                 className="justify-start text-base"
               >
                 <a
-                  href="https://youtube.com/@englishdiscovery2.o?si=Dxh-_WZvGCHPj7hf"
+                  href={youtubeLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"

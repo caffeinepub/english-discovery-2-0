@@ -43,13 +43,6 @@ export default function PricingCards() {
 
   return (
     <div className="space-y-8">
-      <div className="text-center">
-        <h2 className="font-display text-3xl font-bold mb-4">Simple Pricing</h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Choose the plan that best fits your learning goals and budget
-        </p>
-      </div>
-
       <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
         {plans.map((plan) => (
           <Card

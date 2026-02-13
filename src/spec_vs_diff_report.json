@@ -1,20 +1,26 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-13T07:40:39.431Z",
-  "summary": "FoundersSection keeps the same Kuldeep image path and improves circular avatar rendering via object-cover/object-center, but the diff summary does not show any static asset (image file) being added/modified to actually replace the old Kuldeep photo, nor evidence that the old photo is no longer used anywhere else.",
-  "missing_requirements": [
+  "generatedAt": "2026-02-13T09:44:36.505Z",
+  "summary": "REQ-1 appears implemented: the first founder card still uses the Sumit photo config but now displays the name “Saloni Singh”, and the second card still uses the Saloni photo config but now displays “Sumit Shrivastav”. However, there are additional unrelated modifications to tracking/summary files that were not requested.",
+  "missing_requirements": [],
+  "hallucinated_features": [
     {
-      "id": "REQ-14",
-      "requirement": "Replace the existing Founder (Kuldeep) photo used on the website with the user-uploaded real photo, and ensure the old Kuldeep photo is no longer used anywhere in the UI (served as a static frontend asset, valid path, good circular avatar rendering).",
-      "reason": "The code still references the same Kuldeep image path (/assets/generated/founder-kuldeep.dim_512x512.jpg) and the diff summary does not include any added/modified static asset image file indicating the uploaded real photo was actually placed into the frontend assets or that any previous image was removed/fully dereferenced across the UI.",
+      "description": "Updated/added content in project tracking file (project_state.json) marking new feature requests unrelated to runtime behavior.",
+      "reason": "BuildRequest only asked to swap displayed names in frontend/src/components/FoundersSection.tsx and did not request changes to project metadata/tracking files.",
       "evidence": [
-        "frontend/src/components/FoundersSection.tsx"
+        "project_state.json"
+      ]
+    },
+    {
+      "description": "Updated repository summary file (frontend-file-summaries.txt) describing many components and features beyond the requested name swap.",
+      "reason": "BuildRequest did not request changes to documentation/summary files; only the name swap in FoundersSection.tsx was requested.",
+      "evidence": [
+        "frontend-file-summaries.txt"
       ]
     }
   ],
-  "hallucinated_features": [],
-  "confidence": 0.66,
+  "confidence": 0.78,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/components/FoundersSection.tsx",

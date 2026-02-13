@@ -44,13 +44,6 @@ export default function ProgramsSection() {
 
   return (
     <div className="space-y-12">
-      <div className="text-center">
-        <h2 className="font-display text-3xl font-bold mb-4">Our Programs</h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Choose the program that matches your current level and learning goals
-        </p>
-      </div>
-
       <div className="grid gap-6 md:grid-cols-3">
         {programs.map((program) => (
           <Card key={program.title} className={`border-2 ${program.color}`}>

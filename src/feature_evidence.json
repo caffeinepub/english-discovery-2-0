@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-existing-founder-kuldeep-photo-used-on-the-website-with-the-user-uploaded-real-photo-and-ensure-the-old-kuldeep-photo-is-no-longer-used-anywhere-in-the-ui-keep-the-photo-as-a-static-frontend-asset-and-preserve-good-display-quality-in-the-circular-avatar-on-the-home-page-our-team-section",
-      "featureTitle": "Replace the existing Founder (Kuldeep) photo used on the website with the user-uploaded real photo, and ensure the old Kuldeep photo is no longer used anywhere in the UI. Keep the photo as a static frontend asset and preserve good display quality in the circular avatar on the Home page “Our Team” section.",
+      "featureId": "feature-in-the-home-page-our-team-section-frontend-src-components-founderssection-tsx-swap-the-displayed-name-labels-so-that-the-first-card-the-one-currently-using-the-sumit-photo-configuration-displays-saloni-singh-and-the-second-card-the-one-currently-using-the-saloni-photo-configuration-displays-sumit-shrivastav-change-names-only-do-not-change-photos-roles-ordering-or-any-other-content",
+      "featureTitle": "In the Home page “Our Team” section (frontend/src/components/FoundersSection.tsx), swap the displayed name labels so that the first card (the one currently using the Sumit photo configuration) displays “Saloni Singh” and the second card (the one currently using the Saloni photo configuration) displays “Sumit Shrivastav”. Change names only; do not change photos, roles, ordering, or any other content.",
       "files": [
         "frontend/src/components/FoundersSection.tsx"
       ],
@@ -12,10 +12,12 @@
         "shadcn-ui@1.0.0",
         "build-template-react@1.0.0",
         "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0",
+        "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-14"
+        "REQ-1"
       ],
       "confidence": "high"
     }

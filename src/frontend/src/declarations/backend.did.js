@@ -8,33 +8,200 @@
 
 import { IDL } from '@icp-sdk/core/candid';
 
+export const _CaffeineStorageCreateCertificateResult = IDL.Record({
+  'method' : IDL.Text,
+  'blob_hash' : IDL.Text,
+});
+export const _CaffeineStorageRefillInformation = IDL.Record({
+  'proposed_top_up_amount' : IDL.Opt(IDL.Nat),
+});
+export const _CaffeineStorageRefillResult = IDL.Record({
+  'success' : IDL.Opt(IDL.Bool),
+  'topped_up_amount' : IDL.Opt(IDL.Nat),
+});
+export const ExternalBlob = IDL.Vec(IDL.Nat8);
+export const UserRole = IDL.Variant({
+  'admin' : IDL.Null,
+  'user' : IDL.Null,
+  'guest' : IDL.Null,
+});
 export const Inquiry = IDL.Record({
   'name' : IDL.Text,
   'email' : IDL.Text,
   'message' : IDL.Text,
   'timestamp' : IDL.Int,
 });
+export const UserProfile = IDL.Record({
+  'name' : IDL.Text,
+  'email' : IDL.Text,
+});
+export const Photo = IDL.Record({
+  'id' : IDL.Text,
+  'blob' : ExternalBlob,
+  'name' : IDL.Text,
+});
+export const WebsiteContent = IDL.Record({
+  'contactInfo' : IDL.Text,
+  'heroText' : IDL.Text,
+  'introVideoLink' : IDL.Text,
+  'pricingContent' : IDL.Text,
+  'classesContent' : IDL.Text,
+  'schedule' : IDL.Text,
+  'aboutContent' : IDL.Text,
+});
 
 export const idlService = IDL.Service({
+  '_caffeineStorageBlobIsLive' : IDL.Func(
+      [IDL.Vec(IDL.Nat8)],
+      [IDL.Bool],
+      ['query'],
+    ),
+  '_caffeineStorageBlobsToDelete' : IDL.Func(
+      [],
+      [IDL.Vec(IDL.Vec(IDL.Nat8))],
+      ['query'],
+    ),
+  '_caffeineStorageConfirmBlobDeletion' : IDL.Func(
+      [IDL.Vec(IDL.Vec(IDL.Nat8))],
+      [],
+      [],
+    ),
+  '_caffeineStorageCreateCertificate' : IDL.Func(
+      [IDL.Text],
+      [_CaffeineStorageCreateCertificateResult],
+      [],
+    ),
+  '_caffeineStorageRefillCashier' : IDL.Func(
+      [IDL.Opt(_CaffeineStorageRefillInformation)],
+      [_CaffeineStorageRefillResult],
+      [],
+    ),
+  '_caffeineStorageUpdateGatewayPrincipals' : IDL.Func([], [], []),
+  '_initializeAccessControlWithSecret' : IDL.Func([IDL.Text], [], []),
+  'addPhoto' : IDL.Func([IDL.Text, IDL.Text, ExternalBlob], [], []),
+  'assignCallerUserRole' : IDL.Func([IDL.Principal, UserRole], [], []),
+  'clearAllInquiries' : IDL.Func([], [], []),
+  'countInquiries' : IDL.Func([], [IDL.Nat], ['query']),
   'deleteInquiry' : IDL.Func([IDL.Int], [], []),
+  'deletePhoto' : IDL.Func([IDL.Text], [], []),
   'getAllInquiries' : IDL.Func([], [IDL.Vec(Inquiry)], ['query']),
+  'getCallerUserProfile' : IDL.Func([], [IDL.Opt(UserProfile)], ['query']),
+  'getCallerUserRole' : IDL.Func([], [UserRole], ['query']),
+  'getPhoto' : IDL.Func([IDL.Text], [IDL.Opt(Photo)], ['query']),
+  'getUserProfile' : IDL.Func(
+      [IDL.Principal],
+      [IDL.Opt(UserProfile)],
+      ['query'],
+    ),
+  'getWebsiteContent' : IDL.Func([], [WebsiteContent], ['query']),
+  'hasAdminPassword' : IDL.Func([], [IDL.Bool], ['query']),
+  'isCallerAdmin' : IDL.Func([], [IDL.Bool], ['query']),
+  'listPhotos' : IDL.Func([], [IDL.Vec(Photo)], ['query']),
+  'resetAdminPassword' : IDL.Func([], [], []),
+  'saveCallerUserProfile' : IDL.Func([UserProfile], [], []),
+  'setAdminPassword' : IDL.Func([IDL.Text], [], []),
   'submitInquiry' : IDL.Func([IDL.Text, IDL.Text, IDL.Text, IDL.Int], [], []),
+  'updatePhoto' : IDL.Func([IDL.Text, IDL.Text, ExternalBlob], [], []),
+  'updateWebsiteContent' : IDL.Func([WebsiteContent], [], []),
+  'verifyAdminPassword' : IDL.Func([IDL.Text], [IDL.Bool], ['query']),
 });
 
 export const idlInitArgs = [];
 
 export const idlFactory = ({ IDL }) => {
+  const _CaffeineStorageCreateCertificateResult = IDL.Record({
+    'method' : IDL.Text,
+    'blob_hash' : IDL.Text,
+  });
+  const _CaffeineStorageRefillInformation = IDL.Record({
+    'proposed_top_up_amount' : IDL.Opt(IDL.Nat),
+  });
+  const _CaffeineStorageRefillResult = IDL.Record({
+    'success' : IDL.Opt(IDL.Bool),
+    'topped_up_amount' : IDL.Opt(IDL.Nat),
+  });
+  const ExternalBlob = IDL.Vec(IDL.Nat8);
+  const UserRole = IDL.Variant({
+    'admin' : IDL.Null,
+    'user' : IDL.Null,
+    'guest' : IDL.Null,
+  });
   const Inquiry = IDL.Record({
     'name' : IDL.Text,
     'email' : IDL.Text,
     'message' : IDL.Text,
     'timestamp' : IDL.Int,
   });
+  const UserProfile = IDL.Record({ 'name' : IDL.Text, 'email' : IDL.Text });
+  const Photo = IDL.Record({
+    'id' : IDL.Text,
+    'blob' : ExternalBlob,
+    'name' : IDL.Text,
+  });
+  const WebsiteContent = IDL.Record({
+    'contactInfo' : IDL.Text,
+    'heroText' : IDL.Text,
+    'introVideoLink' : IDL.Text,
+    'pricingContent' : IDL.Text,
+    'classesContent' : IDL.Text,
+    'schedule' : IDL.Text,
+    'aboutContent' : IDL.Text,
+  });
   
   return IDL.Service({
+    '_caffeineStorageBlobIsLive' : IDL.Func(
+        [IDL.Vec(IDL.Nat8)],
+        [IDL.Bool],
+        ['query'],
+      ),
+    '_caffeineStorageBlobsToDelete' : IDL.Func(
+        [],
+        [IDL.Vec(IDL.Vec(IDL.Nat8))],
+        ['query'],
+      ),
+    '_caffeineStorageConfirmBlobDeletion' : IDL.Func(
+        [IDL.Vec(IDL.Vec(IDL.Nat8))],
+        [],
+        [],
+      ),
+    '_caffeineStorageCreateCertificate' : IDL.Func(
+        [IDL.Text],
+        [_CaffeineStorageCreateCertificateResult],
+        [],
+      ),
+    '_caffeineStorageRefillCashier' : IDL.Func(
+        [IDL.Opt(_CaffeineStorageRefillInformation)],
+        [_CaffeineStorageRefillResult],
+        [],
+      ),
+    '_caffeineStorageUpdateGatewayPrincipals' : IDL.Func([], [], []),
+    '_initializeAccessControlWithSecret' : IDL.Func([IDL.Text], [], []),
+    'addPhoto' : IDL.Func([IDL.Text, IDL.Text, ExternalBlob], [], []),
+    'assignCallerUserRole' : IDL.Func([IDL.Principal, UserRole], [], []),
+    'clearAllInquiries' : IDL.Func([], [], []),
+    'countInquiries' : IDL.Func([], [IDL.Nat], ['query']),
     'deleteInquiry' : IDL.Func([IDL.Int], [], []),
+    'deletePhoto' : IDL.Func([IDL.Text], [], []),
     'getAllInquiries' : IDL.Func([], [IDL.Vec(Inquiry)], ['query']),
+    'getCallerUserProfile' : IDL.Func([], [IDL.Opt(UserProfile)], ['query']),
+    'getCallerUserRole' : IDL.Func([], [UserRole], ['query']),
+    'getPhoto' : IDL.Func([IDL.Text], [IDL.Opt(Photo)], ['query']),
+    'getUserProfile' : IDL.Func(
+        [IDL.Principal],
+        [IDL.Opt(UserProfile)],
+        ['query'],
+      ),
+    'getWebsiteContent' : IDL.Func([], [WebsiteContent], ['query']),
+    'hasAdminPassword' : IDL.Func([], [IDL.Bool], ['query']),
+    'isCallerAdmin' : IDL.Func([], [IDL.Bool], ['query']),
+    'listPhotos' : IDL.Func([], [IDL.Vec(Photo)], ['query']),
+    'resetAdminPassword' : IDL.Func([], [], []),
+    'saveCallerUserProfile' : IDL.Func([UserProfile], [], []),
+    'setAdminPassword' : IDL.Func([IDL.Text], [], []),
     'submitInquiry' : IDL.Func([IDL.Text, IDL.Text, IDL.Text, IDL.Int], [], []),
+    'updatePhoto' : IDL.Func([IDL.Text, IDL.Text, ExternalBlob], [], []),
+    'updateWebsiteContent' : IDL.Func([WebsiteContent], [], []),
+    'verifyAdminPassword' : IDL.Func([IDL.Text], [IDL.Bool], ['query']),
   });
 };
 

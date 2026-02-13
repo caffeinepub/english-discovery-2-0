@@ -1,27 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace Kuldeep founder photo static asset and ensure circular avatar quality",
+  "title": "Swap Saloni Singh and Sumit Shrivastav name labels in Our Team section",
   "requirements": [
     {
-      "id": "REQ-14",
-      "summary": "Replace the Founder (Kuldeep) photo with the newly uploaded real photo as a static frontend asset and ensure the previous image is not used anywhere, preserving circular avatar crop quality.",
+      "id": "REQ-1",
+      "summary": "Swap only the displayed name strings for the first two team cards in FoundersSection so the Sumit-photo card shows “Saloni Singh” and the Saloni-photo card shows “Sumit Shrivastav”, without changing photos, roles, or ordering.",
       "acceptanceCriteria": [
-        "The Founder (Kuldeep) image displayed in the Home page “Our Team”/Founders section is the newly uploaded real photo.",
-        "No other part of the site references or displays the previous/old Kuldeep founder image.",
-        "The Kuldeep founder image continues to be served as a static asset (not via the backend) and is rendered correctly in the circular avatar (no distortion; centered crop).",
-        "The image path used by the app remains valid (e.g., FoundersSection continues to load without broken images)."
+        "The first (left-most) team card displays the name text exactly: “Saloni Singh”.",
+        "The second (middle) team card displays the name text exactly: “Sumit Shrivastav”.",
+        "The avatar images/photo IDs, fallbackImage paths, roles (e.g., “Co-founder”), and card ordering remain unchanged; only the displayed names are swapped."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/founder-kuldeep.dim_512x512.jpg",
-          "operation": "modify",
-          "description": "Replace the existing static asset with the user-uploaded real Kuldeep founder photo, keeping the same filename/path so all current references remain valid and the old image is no longer served."
-        },
-        {
           "path": "frontend/src/components/FoundersSection.tsx",
           "operation": "modify",
-          "description": "Ensure Kuldeep continues to reference the static asset at /assets/generated/founder-kuldeep.dim_512x512.jpg and adjust the avatar image classes to enforce a centered, non-distorted circular crop (e.g., object-cover + centered positioning) without changing founders order/names/roles; do not edit files under frontend/src/components/ui."
+          "description": "Update only the `name` fields in the first two entries of the `founders` array: set the first (currently tied to `sumitPhoto`/its fallbackImage) to exactly “Saloni Singh”, and set the second (currently tied to `saloniPhoto`/its fallbackImage) to exactly “Sumit Shrivastav”. Do not alter `photo`, `fallbackImage`, `role`, `initials`, or array ordering."
         }
       ]
     }

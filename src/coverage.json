@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-13T07:40:39.434Z",
+  "generatedAt": "2026-02-13T09:44:36.507Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,15 +11,13 @@
     "implemented": 1,
     "items": [
       {
-        "id": "REQ-14",
-        "summary": "Replace the existing Founder (Kuldeep) photo used on the website with the user-uploaded real photo, and ensure the old Kuldeep photo is no longer used anywhere in the UI. Keep the photo as a static frontend asset and preserve good display quality in the circular avatar on the Home page “Our Team” section.",
+        "id": "REQ-1",
+        "summary": "In the Home page “Our Team” section (frontend/src/components/FoundersSection.tsx), swap the displayed name labels so that the first card (the one currently using the Sumit photo configuration) displays “Saloni Singh” and the second card (the one currently using the Saloni photo configuration) displays “Sumit Shrivastav”. Change names only; do not change photos, roles, ordering, or any other content.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/generated/founder-kuldeep.dim_512x512.jpg",
           "frontend/src/components/FoundersSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/public/assets/generated/founder-kuldeep.dim_512x512.jpg",
           "frontend/src/components/FoundersSection.tsx"
         ]
       }
@@ -30,7 +28,6 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/founder-kuldeep.dim_512x512.jpg",
     "frontend/src/components/FoundersSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
