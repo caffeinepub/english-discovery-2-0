@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-replace-the-existing-founder-kuldeep-photo-used-on-the-website-with-the-user-uploaded-real-photo-and-ensure-the-old-kuldeep-photo-is-no-longer-used-anywhere-in-the-ui-keep-the-photo-as-a-static-frontend-asset-and-preserve-good-display-quality-in-the-circular-avatar-on-the-home-page-our-team-section",
+      "featureTitle": "Replace the existing Founder (Kuldeep) photo used on the website with the user-uploaded real photo, and ensure the old Kuldeep photo is no longer used anywhere in the UI. Keep the photo as a static frontend asset and preserve good display quality in the circular avatar on the Home page “Our Team” section.",
+      "files": [
+        "frontend/src/components/FoundersSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

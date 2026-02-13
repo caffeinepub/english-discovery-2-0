@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Website project for English Discovery 2.0, an online-only platform providing English spoken classes.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Edit Images\n- Replace the Kuldeep founder portrait with the uploaded real photo (founder-kuldeep.dim_512x512.jpg > founder-kuldeep.dim_512x512.jpg)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-marketing-website-for-the-platform-name-english-discovery-2-0-that-clearly-communicates-it-is-an-online-only-service-providing-english-spoken-classes",
+      "title": "Create a responsive marketing website for the platform name “English Discovery 2.0” that clearly communicates it is an online-only service providing English spoken classes.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-core-public-pages-sections-with-clear-navigation-home-hero-value-proposition-about-classes-programs-what-s-included-who-it-s-for-levels-pricing-faq-and-contact-inquiry-form",
+      "title": "Add core public pages/sections with clear navigation: Home (hero + value proposition), About, Classes/Programs (what’s included, who it’s for, levels), Pricing, FAQ, and Contact (inquiry form).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-inquiry-submission-flow-when-a-visitor-submits-the-contact-form-save-the-inquiry-in-the-motoko-backend-and-show-a-success-failure-message-in-the-ui",
+      "title": "Implement an inquiry submission flow: when a visitor submits the Contact form, save the inquiry in the Motoko backend and show a success/failure message in the UI.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-simple-internal-admin-page-no-authentication-required-for-initial-build-that-lists-submitted-inquiries-most-recent-first-so-the-owner-can-verify-messages-are-being-captured",
+      "title": "Add a simple internal “Admin” page (no authentication required for initial build) that lists submitted inquiries (most recent first) so the owner can verify messages are being captured.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-creative-visual-theme-appropriate-for-an-english-learning-brand-avoid-blue-purple-as-primary-colors-consistent-typography-spacing-button-styles-and-section-layout-across-all-pages",
+      "title": "Apply a cohesive, creative visual theme appropriate for an English learning brand (avoid blue/purple as primary colors): consistent typography, spacing, button styles, and section layout across all pages.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-brand-hero-imagery-and-wire-it-into-the-ui-served-from-frontend-static-assets-not-from-the-backend",
+      "title": "Add generated static brand/hero imagery and wire it into the UI (served from frontend static assets, not from the backend).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-site-wide-contact-information-to-display-the-customer-care-phone-number-7668397510-and-contact-email-kuldeep-a-215620-gmail-com-in-the-contact-section-and-in-the-footer-using-clickable-links-tel-and-mailto-and-english-labels-e-g-customer-care",
+      "title": "Update site-wide contact information to display the customer care phone number (7668397510) and contact email (kuldeep.a.215620@gmail.com) in the Contact section and in the footer, using clickable links (tel: and mailto:) and English labels (e.g., “Customer Care”).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-founders-or-our-team-section-on-the-home-page-that-lists-in-this-exact-order-founder-kuldeep-co-founder-saloni-singh-co-founder-sumit-srivastava-and-displays-their-pictures-in-the-same-sequence",
+      "title": "Add a “Founders” (or “Our Team”) section on the Home page that lists, in this exact order: Founder Kuldeep; Co-founder Saloni Singh; Co-founder Sumit Srivastava; and displays their pictures in the same sequence.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-pricing-section-content-to-indian-rupees-and-reflect-the-user-provided-offerings-500-for-lifetime-free-class-access-and-1000-per-month-for-personal-classes-ensure-pricing-copy-plan-titles-and-feature-bullets-match-these-offerings-remove-usd-pricing",
+      "title": "Update the Pricing section content to Indian Rupees and reflect the user-provided offerings: ₹500 for lifetime free class access; and ₹1000 per month for personal classes. Ensure pricing copy, plan titles, and feature bullets match these offerings (remove USD pricing).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-provided-youtube-channel-link-https-youtube-com-englishdiscovery2-o-si-dxh-wzvgchpj7hf-to-the-site-in-a-visible-youtube-link-location-header-and-or-footer-the-link-must-open-in-a-new-tab",
+      "title": "Add the provided YouTube channel link (https://youtube.com/@englishdiscovery2.o?si=Dxh-_WZvGCHPj7hf) to the site in a visible “YouTube” link location (header and/or footer). The link must open in a new tab.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-schedule-information-stating-that-batches-are-available-in-the-morning-and-evening-and-ensure-this-information-appears-prominently-on-the-home-page-e-g-in-the-hero-features-or-programs-area-using-english-text",
+      "title": "Add schedule information stating that batches are available in the morning and evening, and ensure this information appears prominently on the Home page (e.g., in the Hero, Features, or Programs area) using English text.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-site-logo-used-in-the-header-and-footer-with-the-user-provided-uploaded-logo-image-keeping-it-as-a-static-frontend-asset-and-preserving-good-display-quality-at-typical-logo-sizes",
+      "title": "Replace the site logo used in the header and footer with the user-provided uploaded logo image, keeping it as a static frontend asset and preserving good display quality at typical logo sizes.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-store-the-provided-founders-photos-and-updated-logo-as-static-frontend-assets-and-wire-them-into-the-ui-without-routing-through-the-backend",
+      "title": "Store the provided founders’ photos and updated logo as static frontend assets and wire them into the UI without routing through the backend.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-founder-kuldeep-photo-used-on-the-website-with-the-user-uploaded-real-photo-and-ensure-the-old-kuldeep-photo-is-no-longer-used-anywhere-in-the-ui-keep-the-photo-as-a-static-frontend-asset-and-preserve-good-display-quality-in-the-circular-avatar-on-the-home-page-our-team-section",
+      "title": "Replace the existing Founder (Kuldeep) photo used on the website with the user-uploaded real photo, and ensure the old Kuldeep photo is no longer used anywhere in the UI. Keep the photo as a static frontend asset and preserve good display quality in the circular avatar on the Home page “Our Team” section.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Build a website for the English Discovery 2.0 online English spoken classes platform.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add customer care contact phone number and contact email to the site (Customer care: 7668397510; Email: kuldeep.a.215620@gmail.com).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add a Founders/Team section listing Founder Kuldeep and Co-founders Saloni Singh and Sumit Srivastava in that sequence, including their pictures.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Update Pricing content to Indian Rupees: ₹500 for lifetime free class access; ₹1000/month for personal classes.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add YouTube channel link to the site: https://youtube.com/@englishdiscovery2.o?si=Dxh-_WZvGCHPj7hf.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add schedule info indicating batches are available morning and evening (all-time availability).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Replace the existing/old Founder (Kuldeep) photo on the site with the user-provided real photo and remove the old image wherever it appears.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "English Discovery 2.0",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

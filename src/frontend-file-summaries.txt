@@ -1,0 +1,15 @@
+{
+  "frontend/src/index.css": "Global styles with warm orange/amber OKLCH color palette for light and dark modes, custom section padding utilities, and responsive container classes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with Poppins display font, warm shadow utilities, and maintaining OKLCH color system integration.",
+  "frontend/src/App.tsx": "Root application component with TanStack Router setup using Outlet pattern, defining routes for home and admin pages with shared header/footer layout and toast notifications.",
+  "frontend/src/components/SiteHeader.tsx": "Responsive header with logo, navigation menu, and YouTube channel link in both desktop and mobile views.",
+  "frontend/src/components/SiteFooter.tsx": "Footer with brand logo, quick links, contact information (phone and email), social media links including YouTube, and Caffeine.ai attribution.",
+  "frontend/src/pages/HomePage.tsx": "Main marketing page with hero section (including batch schedule info), features, about, founders section, programs, pricing, FAQ, and contact sections with customer care phone and email prominently displayed.",
+  "frontend/src/components/ProgramsSection.tsx": "Classes section component displaying three proficiency levels (Beginner, Intermediate, Advanced) with features and what's included in all programs.",
+  "frontend/src/components/PricingCards.tsx": "Pricing section displaying two INR-based plans (₹500 lifetime free class access and ₹1000/month personal classes) with features and scroll-to-contact CTAs.",
+  "frontend/src/components/FaqAccordion.tsx": "FAQ component using Accordion UI to display eight common questions about online classes, scheduling, and platform features.",
+  "frontend/src/components/ContactForm.tsx": "Contact form with validation, loading states, and success/error alerts that submits inquiries to the backend via React Query mutation.",
+  "frontend/src/pages/AdminPage.tsx": "Admin dashboard displaying all submitted inquiries in a table with name, email, message, and timestamp, including empty state and statistics cards.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching all inquiries and submitting new inquiries with automatic cache invalidation.",
+  "frontend/src/components/FoundersSection.tsx": "Displays three founder profiles (Kuldeep, Saloni Singh, Sumit Srivastava) with circular avatar photos, names, and roles in a responsive grid layout using Card components with centered object-cover image styling."
+}

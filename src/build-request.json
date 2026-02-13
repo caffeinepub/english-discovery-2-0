@@ -1,0 +1,52 @@
+{
+  "kind": "build_request",
+  "title": "Replace founder Kuldeep photo with uploaded real photo and remove old image",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-14",
+      "text": "Replace the existing Founder (Kuldeep) photo used on the website with the user-uploaded real photo, and ensure the old Kuldeep photo is no longer used anywhere in the UI. Keep the photo as a static frontend asset and preserve good display quality in the circular avatar on the Home page “Our Team” section.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "ADD THIS REAL PHOTO OF FOUNDER AND REMOVE OLD"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Founder (Kuldeep) image displayed in the Home page “Our Team”/Founders section is the newly uploaded real photo.",
+        "No other part of the site references or displays the previous/old Kuldeep founder image.",
+        "The Kuldeep founder image continues to be served as a static asset (not via the backend) and is rendered correctly in the circular avatar (no distortion; centered crop).",
+        "The image path used by the app remains valid (e.g., FoundersSection continues to load without broken images)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not route images through the backend; store and serve them as static frontend assets.",
+    "Do not change the founders order, names, or roles (Kuldeep; Saloni Singh; Sumit Srivastava) unless explicitly requested.",
+    "Do not edit files under frontend/src/components/ui (compose them only)."
+  ],
+  "nonGoals": [
+    "Changing the platform logo or other brand imagery beyond the Kuldeep founder photo replacement.",
+    "Updating Saloni Singh or Sumit Srivastava photos.",
+    "Adding new founders/team members or changing section copy."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": [
+      "Replace the Kuldeep founder portrait with the uploaded real photo (founder-kuldeep.dim_512x512.jpg > founder-kuldeep.dim_512x512.jpg)"
+    ]
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

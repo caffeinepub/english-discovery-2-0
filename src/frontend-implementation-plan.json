@@ -1,0 +1,29 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Replace Kuldeep founder photo static asset and ensure circular avatar quality",
+  "requirements": [
+    {
+      "id": "REQ-14",
+      "summary": "Replace the Founder (Kuldeep) photo with the newly uploaded real photo as a static frontend asset and ensure the previous image is not used anywhere, preserving circular avatar crop quality.",
+      "acceptanceCriteria": [
+        "The Founder (Kuldeep) image displayed in the Home page “Our Team”/Founders section is the newly uploaded real photo.",
+        "No other part of the site references or displays the previous/old Kuldeep founder image.",
+        "The Kuldeep founder image continues to be served as a static asset (not via the backend) and is rendered correctly in the circular avatar (no distortion; centered crop).",
+        "The image path used by the app remains valid (e.g., FoundersSection continues to load without broken images)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/founder-kuldeep.dim_512x512.jpg",
+          "operation": "modify",
+          "description": "Replace the existing static asset with the user-uploaded real Kuldeep founder photo, keeping the same filename/path so all current references remain valid and the old image is no longer served."
+        },
+        {
+          "path": "frontend/src/components/FoundersSection.tsx",
+          "operation": "modify",
+          "description": "Ensure Kuldeep continues to reference the static asset at /assets/generated/founder-kuldeep.dim_512x512.jpg and adjust the avatar image classes to enforce a centered, non-distorted circular crop (e.g., object-cover + centered positioning) without changing founders order/names/roles; do not edit files under frontend/src/components/ui."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T07:40:39.434Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-14",
+        "summary": "Replace the existing Founder (Kuldeep) photo used on the website with the user-uploaded real photo, and ensure the old Kuldeep photo is no longer used anywhere in the UI. Keep the photo as a static frontend asset and preserve good display quality in the circular avatar on the Home page “Our Team” section.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/founder-kuldeep.dim_512x512.jpg",
+          "frontend/src/components/FoundersSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/founder-kuldeep.dim_512x512.jpg",
+          "frontend/src/components/FoundersSection.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/founder-kuldeep.dim_512x512.jpg",
+    "frontend/src/components/FoundersSection.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
